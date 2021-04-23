@@ -2,20 +2,6 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 
 describe("Login feature", () => {
 
-    beforeEach('Get random email address', () => {
-        cy.visit('http://www.yopmail.com/pl/email-generator.php')
-        cy.get('value').invoke('txt').as('txt')
-        });
-
-    it(() => {
-        this.txt
-    });
-
-    When('user enters unused email address', () => {
-            cy.visit('http://automationpractice.com/index.php?controller=authentication&back=my-account')
-            cy.get(login).type(this.text)
-    });
-
     Given('user is on home page', () => {
         cy.visit('http://automationpractice.com/index.php');
     })
